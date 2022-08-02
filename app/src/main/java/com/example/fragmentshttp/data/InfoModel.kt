@@ -3,112 +3,112 @@ package com.example.fragmentshttp.data
 import com.squareup.moshi.Json
 
 data class InfoModel(
-    val id: String,
-    val projectId: String,
-    val equipmentId: String,
-    val status: String,
-    val requestedBy: String,
-    val acceptedBy: Any?,
-    val author: String,
-    val category: String,
-    val locations: Locations,
-    val filters: List<Filters>,
-    val type: String,
-    val organization: String,
-    val address: String,
-    val startDate: String,
-    val endDate: String,
+    val id: String? = null,
+    val projectId: String? = null,
+    val equipmentId: String? = null,
+    val status: String? = null,
+    val requestedBy: String? = null,
+    val acceptedBy: Any? = null,
+    val author: String? = null,
+    val category: String? = null,
+    val locations: Locations? = null,
+    val filters: List<Filters>? = null,
+    val type: String? = null,
+    val organization: String? = null,
+    val address: String? = null,
+    val startDate: String? = null,
+    val endDate: String? = null,
     val description: Any? = null,
-    val prolongDates: List<String>,
-    val releaseDates: List<String>,
-    val isDummy: Boolean,
-    val hasDriver: Boolean,
+    val prolongDates: List<String>? = null,
+    val releaseDates: List<String>? = null,
+    val isDummy: Boolean? = null,
+    val hasDriver: Boolean? = null,
     val overwriteDate: Any? = null,
     val metaInfo: Any? = null,
     val warehouseId: Any? = null,
     val rentalDescription: Any? = null,
-    val internalTransportations: InternalTransportations,
-    val startDateMilliseconds: Long,
-    val endDateMilliseconds: Long,
-    val equipment: Equipment
+    val internalTransportations: InternalTransportations? = null,
+    val startDateMilliseconds: Long? = null,
+    val endDateMilliseconds: Long? = null,
+    val equipment: Equipment? = null
 ) {
 
     data class Locations(
-        val type: String,
-        val coordinates: List<Float>
+        val type: String? = null,
+        val coordinates: List<Float>? = null
     )
 
     data class Filters(
-        val name: String,
-        val value: Value
+        val name: String? = null,
+        val value: Value? = null
     ) {
 
         data class Value(
-            val max: Int,
-            val min: Int
+            val max: Int? = null,
+            val min: Int? = null
         )
     }
 
     data class InternalTransportations(
-        val id: String,
-        val projectRequestId: String,
-        val pickUpDate: String,
-        val deliveryDate: String,
+        val id: String? = null,
+        val projectRequestId: String? = null,
+        val pickUpDate: String? = null,
+        val deliveryDate: String? = null,
         val description: Any? = null,
-        val status: String,
+        val status: String? = null,
         val startDateOption: Any? = null,
         val endDateOption: Any? = null,
-        val pickUpLocation: Locations,
-        val deliveryLocation: Locations,
-        val provider: String,
-        val pickUpLocationAddress: String,
-        val deliveryLocationAddress: String,
-        val pGroup: String,
+        val pickUpLocation: Locations? = null,
+        val deliveryLocation: Locations? = null,
+        val provider: String? = null,
+        val pickUpLocationAddress: String? = null,
+        val deliveryLocationAddress: String? = null,
+        val pGroup: String? = null,
         val isOrganizedWithoutSam: Any? = null,
-        val templatePGroup: String,
-        val pickUpDateMilliseconds: Long,
-        val deliveryDateMilliseconds: Long,
+        val templatePGroup: String? = null,
+        val pickUpDateMilliseconds: Long? = null,
+        val deliveryDateMilliseconds: Long? = null,
         val startDateOptionMilliseconds: Any? = null,
         val endDateOptionMilliseconds: Any? = null
     )
 
     data class Equipment(
-        val id: String,
-        val title: String,
-        val invNumber: String,
-        val categoryId: String,
-        val modelId: String,
-        val brandId: String,
-        val year: Int,
-        val specifications: List<Specifications>,
-        val weight: Int,
+        val id: String? = null,
+        val title: String? = null,
+        val invNumber: String? = null,
+        val categoryId: String? = null,
+        val modelId: String? = null,
+        val brandId: String? = null,
+        val year: Int? = null,
+        val specifications: List<Specifications>? = null,
+        val weight: Int? = null,
         @Json(name = "additional_specifications")
-        val additionalSpecifications: Any?,
-        val structureId: String,
-        val organizationId: String,
+        val additionalSpecifications: Any? = null,
+        val structureId: String? = null,
+        val organizationId: String? = null,
         val beaconType: Any? = null,
-        val beaconId: String,
-        val beaconVendor: String,
-        val RFID: String,
+        val beaconId: String? = null,
+        val beaconVendor: String? = null,
+        val RFID: String? = null,
         val dailyPrice: Any? = null,
         val inactive: Any? = null,
-        val tag: Tag,
+        val tag: Tag? = null,
         val telematicBox: Any? = null,
-        val createdAt: String,
+        val createdAt: String? = null,
         @Json(name = "special_number")
         val specialNumber: Any? = null,
         @Json(name = "last_check")
-        val lastCheck: String,
+        val lastCheck: String? = null,
         @Json(name = "next_check")
-        val nextCheck: String,
+        val nextCheck: String? = null,
         @Json(name = "responsible_person")
         val responsiblePerson: Any? = null,
         @Json(name = "test_type")
         val testType: Any? = null,
         @Json(name = "unique_equipment_id")
-        val uniqueEquipmentId: String,
+        val uniqueEquipmentId: String? = null,
         @Json(name = "bgl_number")
-        val bglNumber: String,
+        val bglNumber: String? = null,
         @Json(name = "serial_number")
         val serialNumber: Any? = null,
         val inventory: Any? = null,
@@ -118,92 +118,92 @@ data class InfoModel(
         @Json(name = "navaris_criteria")
         val navarisCriteria: Any? = null,
         @Json(name = "dont_send_to_as400")
-        val dontSendToAs400: Boolean,
-        val model: Model,
-        val brand: Model.Brand,
-        val category: Category,
-        val structure: Structure,
+        val dontSendToAs400: Boolean? = null,
+        val model: Model? = null,
+        val brand: Model.Brand? = null,
+        val category: Category? = null,
+        val structure: Structure? = null,
         val wareHouse: Any? = null,
-        val equipmentMedia: List<EquipmentMedia>,
-        val telematics: List<Telematics>,
-        val isMoving: Boolean
+        val equipmentMedia: List<EquipmentMedia>? = null,
+        val telematics: List<Telematics>? = null,
+        val isMoving: Boolean? = null
         ) {
 
         data class Specifications(
-            val key: String,
-            val value: Any
+            val key: String? = null,
+            val value: Any? = null
         )
 
         data class Tag(
-            val date: String,
-            val authorName: String,
-            val media: List<Any>
+            val date: String? = null,
+            val authorName: String? = null,
+            val media: List<Any>? = null
         )
 
         data class Model(
-            val id: String,
-            val name: String,
-            val createdAt: String,
-            val brand: Brand
+            val id: String? = null,
+            val name: String? = null,
+            val createdAt: String? = null,
+            val brand: Brand? = null
         ) {
 
             data class Brand(
-                val id: String,
-                val name: String,
-                val createdAt: String
+                val id: String? = null,
+                val name: String? = null,
+                val createdAt: String? = null
             )
         }
 
         data class Category(
-            val id: String,
-            val name: String,
+            val id: String? = null,
+            val name: String? = null,
             @Json(name = "name_de")
-            val nameDe: String,
-            val createdAt: String,
-            val media: List<String>
+            val nameDe: String? = null,
+            val createdAt: String? = null,
+            val media: List<String>? = null
         )
 
         data class Structure(
-            val id: String,
-            val name: String,
-            val type: String,
-            val color: String
+            val id: String? = null,
+            val name: String? = null,
+            val type: String? = null,
+            val color: String? = null
         )
 
         data class EquipmentMedia(
-            val id: String,
-            val name: String,
-            val files: List<File>,
-            val type: String,
-            val modelId: String,
-            val main: Boolean,
-            val modelType: String,
-            val createdAt: String
+            val id: String? = null,
+            val name: String? = null,
+            val files: List<File>? = null,
+            val type: String? = null,
+            val modelId: String? = null,
+            val main: Boolean? = null,
+            val modelType: String? = null,
+            val createdAt: String? = null
         ) {
 
             data class File(
-                val size: String,
-                val path: String
+                val size: String? = null,
+                val path: String? = null
             )
         }
 
         data class Telematics(
-            val timestamp: Long,
-            val eventType: String,
-            val projectId: String,
-            val equipmentId: String,
-            val locationName: String,
-            val location: Location,
-            val costCenter: String,
-            val lastLatitude: Float,
-            val lastLongitude: Float,
-            val lastLatLonPrecise: Boolean,
-            val lastAddressByLatLon: String
+            val timestamp: Long? = null,
+            val eventType: String? = null,
+            val projectId: String? = null,
+            val equipmentId: String? = null,
+            val locationName: String? = null,
+            val location: Location? = null,
+            val costCenter: String? = null,
+            val lastLatitude: Float? = null,
+            val lastLongitude: Float? = null,
+            val lastLatLonPrecise: Boolean? = null,
+            val lastAddressByLatLon: String? = null
         ) {
 
             data class Location(
-                val type: String,
-                val coordinates: List<List<List<List<Float>>>>
+                val type: String? = null,
+                val coordinates: List<List<List<List<Float>>>>? = null
             )
         }
     }
